@@ -14,3 +14,15 @@ function filter(obj1, obj2) {
     }
     return result;
 }
+
+function compareJSON(obj1, obj2) {
+  var ret = {};
+  for(var i in obj2) {
+    if(!obj1.hasOwnProperty(i) || obj2[i] !== obj1[i]) {
+      ret[i] = obj2[i];
+    }
+  }
+  return ret;
+};
+
+console.log(compareJSON(aik, dif));
