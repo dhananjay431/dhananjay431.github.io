@@ -1,0 +1,585 @@
+RefCodeType Collection
+{
+    "_id": ObjectId,
+    "codeType": String,
+    "active": Boolean,
+    "deleted": Boolean,
+    "created": {
+        "by": {
+            "type": ObjectId,
+            "ref": ‘txnUser’
+        },
+        "at": Date
+    },
+    "updated": {
+        "by": {
+            "type": ObjectId,
+            "ref": ‘txnUser’
+        },
+        "at": Date
+    }
+}
+
+RefCodeValue Collection
+
+{
+    "_id": ObjectId,
+    "parentId": {
+        "type": ObjectId,
+        "ref": 'RefCodeValue'
+    },
+    "codeType": {
+        "type": ObjectId,
+        "ref": 'RefCodeType'
+    },
+    "codeValue": String,
+	"description": String,
+    "shortName": String,
+    "sequenceNo": Number,
+    "active": Boolean,
+    "deleted": Boolean,
+    "created": {
+        "by": {
+            "type": ObjectId,
+            "ref": ‘txnUser’
+        },
+        "at": Date
+    },
+    "updated": {
+        "by": {
+            "type": ObjectId,
+            "ref": ‘txnUser’
+        },
+        "at": Date
+    }
+}
+
+
+
+University Collection
+
+{
+    "_id": ObjectId,
+    "school_name": String,
+    "dept_id": {
+        "type": ObjectId,
+        "ref": 'RefCodeValue'
+    },
+    "dept_name": String,
+    "department_address": {
+    	"street1": String,
+         "street2": String,
+         "city": String,
+         "state": String,
+         "state_abbreviation": String,
+         "zip": String,
+         "country": String,
+         "country_abbreviation": String,
+    }
+    "department_contact": {
+         "name": String,
+         "title": String,
+         "phone": String,
+         "fax": String,
+         "email": String,
+         "website": String
+    },
+    "directory_profile": [{
+    	"_id": ObjectId,
+    	"name": String,
+    	"title": String,
+    	"email": String,
+    	"phone": String,
+    	"fax": String,
+    }],
+    "university_information": {
+    	"leader_title" : String,
+    	"name": String,
+    	"dean_name": String,
+    	"website": String,
+    	"control_id": {
+	        "type": ObjectId,
+	        "ref": 'RefCodeValue'
+    	},
+    	"control": String,
+    	"setting_id": {
+	        "type": ObjectId,
+	        "ref": 'RefCodeValue'
+    	},
+	    "setting": String,
+	    "total_faculty": Number,
+	    "total_graduate_faculty": Number,
+	    "total_students": Number,
+	    "total_graduate_students": Number
+    },
+    "department_information": {
+      "dept_chairman_title_id" : {
+	        "type": ObjectId,
+	        "ref": 'RefCodeValue'
+      },
+      "dept_chairman_title": String,
+      "dept_chairman_salute_id" : {
+	        "type": ObjectId,
+	        "ref": 'RefCodeValue'
+      },
+      "dept_chairman_salute": String,
+      "dept_chairman_name": String,
+      "email": String,
+      "phone": String,
+      "full_time_positions": Number,
+      "full_time_faculty": Number,
+      "full_time_graduate_students": Number,
+      "first_year_graduate_students": Number,
+      "female_first_year_students": Number,
+      "total_postdocs": Number
+   },
+   "admission_contacts": {
+   		"address_admission": String,
+   		"phone": String,
+   		"email": String,
+   		"website": String
+   },
+   "application_deadline": {
+	   	"fall_admission_domestic": Date,
+	   	"fall_admission_international": Date
+	   	"spring_admission_domestic": Date,
+	   	"spring_admission_international": Date,
+	   	"application_fee_required": Boolean,
+	   	"application_fee_domestic": String,
+	   	"application_fee_international": String,
+	   	"application_info": String
+   },
+   "admissions_information": {
+   		"year": String,
+        "applied": Number,
+        "admitted": Number,
+        "enrolled": Number
+   },
+    "admission_requirement": {
+         "bachelor_degree_requirement": String,
+         "min_undergraduate_GPA": Number,
+         "GRE_general_test_required": String
+         "min_GRE_general_quantitative": Number,
+         "min_GRE_general_verbal": Number,
+		 "min_GRE_general_analytical_writing": Number,
+         "mean_GRE_general_score_range": Number,
+         "additional_note_GRE_general": String,    
+         "GRE_physics_test_required": String,
+		 "min_accepted_physics_GRE_score": Number,
+		 "mean_physics_GRE_score_range": Number,
+         "additional_note_GRE_physics": String,      
+         "TOEFL-exam_required": String,
+         "min_accepted_TOEFL_PBT_score": Number,
+         "min_accepted_TOEFL_iBT-score": Number,
+         "additional_note_TOEFL": String
+    },
+    "other_admission_information": {
+    	"additional_requirements": String,
+    	"undergraduate_preparation_assumed": String
+	},
+	"tuition_academic_year": String,
+	"public_institutions": {
+		"in_state_full_time_method_id": {
+	        "type": ObjectId,
+	        "ref": 'RefCodeValue'
+      	},
+      	"in_state_full_time_method": String,
+      	"in_state_full_time_amount": String,
+      	"in_state_part_time_method_id": {
+	        "type": ObjectId,
+	        "ref": 'RefCodeValue'
+      	},
+      	"in_state_part_time_method": String,
+      	"in_state_part_time_amount": String,
+	},
+	"private_institutions": {
+		"full_time_method_id": {
+	        "type": ObjectId,
+	        "ref": 'RefCodeValue'
+      	},
+      	"full_time_method": String,
+      	"full_time_amount": String,
+      	"part_time_method_id": {
+	        "type": ObjectId,
+	        "ref": 'RefCodeValue'
+      	},
+      	"part_time_method": String,
+      	"part_time_amount": String,
+	},
+	"tuition_costs_notes": String,
+	"full_time_credit_hours_semester": Number,
+	"deferred_tuition_plan": Boolean,
+    "health_insurance_available": Boolean,
+    "health_insurance_cost": Number,
+    "other_academic_fees": String,
+    "academic_term": String,
+    "tuition_waiver": {
+         "full_tuition_waived": Number,
+         "partial_tuition_waived": Number
+    },
+    "assistantships_fellowships": {
+    	"first_year_TAstudent": Number,
+		"first_year_RAstudent": Number,
+		"first_year_fellowship_student": Number,
+		"avg_acad_TA_stipend": String,
+		"avg_acad_RA_stipend": String,
+		"avg_acad_fellowship_stipend": String,
+		"assistants_notes": String
+    },
+    "financial_aid_deadline": {
+    	"fall_admission_domestic": Date,
+    	"fall_admission_international": Date,
+    	"spring_admission_domestic": Date,
+    	"spring_admission_international": Date,
+    },
+    "loans_available": {
+    	"domestic": Boolean,
+    	"International": Boolean,
+    	"GAPSFAS_application": Boolean,
+    	"FAFSA_application": Boolean
+    },
+    "financial_aid_information": {
+    	"address": String,
+    	"phone": String,
+    	"email": String,
+    	"website": String
+    },
+    "housing": {
+    	"address": String,
+    	"phone": String,
+    	"email": String,
+    	"website": String,
+    	"on_campus_housing_single": Boolean,
+    	"on_campus_housing_married": Boolean
+    },
+    "faculty_enrollments_degrees_granted": {
+		"faculty": String,
+		"enrollment": String,
+    	"degrees_granted_first": String,
+    	"degrees_granted_second": String,
+    	"total_faculty": Number,
+    	"total_master_enrollment": Number,
+      	"total_doctorate_enrollment": Number,
+  		"total_master_degree_granted_first": Number,
+  		"total_terminal_degree_granted_first": Number,
+  		"total_doctorate_degree_granted_first": Number,
+  		"total_master_degree_granted_second": Number,
+  		"total_terminal_degree_granted_second": Number,
+  		"total_doctorate_degree_granted_second": Number
+    	"full_time_master_graduate_student": Number,
+    	"full_time_doctorate_graduate_student": Number,
+    	"first_year_master_graduate_students": Number,
+    	"first_year_doctorate_graduate_students": Number,
+    	"faculty_enrollments_degrees_granted_data": [{
+    		"_id": ObjectId,
+    		"research_specialty_id": {
+		        "type": ObjectId,
+		        "ref": 'RefCodeValue'
+      		},
+	  		"research_specialty": String,
+	  		"preferred_specialty_name": String,
+	  		"faculty_count": Number,
+	  		"master_enrollment": Number,
+	  		"doctorate_enrollment": Number,
+	  		"master_degree_granted_first": Number,
+	  		"terminal_degree_granted_first": Number,
+	  		"doctorate_degree_granted_first": Number,
+	  		"master_degree_granted_second": Number,
+	  		"terminal_degree_granted_second": Number,
+	  		"doctorate_degree_granted_second": Number
+    	}],
+	},
+	"degree_requirements": {
+		"master": String,
+		"doctorate": String,
+		"other_degree_options": String,
+		"thesis": String
+	},
+	"special_equipment_facilities_programs": String,
+	"separately_budgeted_research": {
+		"federal_government_departmental": String,
+		"federal_government_physics": String,
+		"state_government_departmental": String,
+		"state_government_physics": String,
+		"non_profit_organization_departmental": String,
+		"non_profit_organization_physics": String,
+		"business_industry_departmental": String,
+		"business_industry_physics": String,
+		"other_departmental": String,
+		"other_physics": String,
+		"total_departmental": String,
+		"total_physics": String
+	},
+	"Separately_budgeted_research": {
+		"total_grants": Number,
+		"total_expenditures ": Number,
+		"Separately_budgeted_research_data": [{
+			"_id": ObjectId,
+			"research_specialty_id" : {
+		        "type": ObjectId,
+		        "ref": 'RefCodeValue'
+	      	},
+	      	"research_specialty": String,
+	      	"specialty_name": String,
+	      	"grants": String,
+	      	"expenditures": String
+		}]
+	},
+	"research_specialties":[{
+		"_id": ObjectId,
+		"research_specialty_id" : {
+		    "type": ObjectId,
+		    "ref": 'RefCodeValue'
+	    },
+	    "research_specialty": String,
+	    "specialty_name": String,
+	    "PHD_degree_type_id": {
+		    "type": ObjectId,
+		    "ref": 'RefCodeValue'
+	    },
+	    "PHD_degree_type": String,
+	    "master_degree_type_id":  {
+		    "type": ObjectId,
+		    "ref": 'RefCodeValue'
+	    },
+	    "master_degree_type": String
+	}],
+	"describe_culture": String,
+	"notable_alumni": [{
+		"_id": ObjectId,
+		"first_name": String
+		"last_name": String,
+		"degree_type": String,
+		"degree_year": String,
+		"notable_comments": String
+	}],
+	"faculty_info": [
+      {
+      	"_id": ObjectId,
+        "role_id": {
+		    "type": ObjectId,
+		    "ref": 'RefCodeValue'
+	    },
+        "role": String,
+        "first-name": String,
+        "middle-name": String,
+        "last-name": String,
+        "degree_type_id": {
+		    "type": ObjectId,
+		    "ref": 'RefCodeValue'
+	    },
+	    "degree_type": String,
+	    "degree_year": String,
+	    "institution": String,
+	    "country_territory_id": {
+		    "type": ObjectId,
+		    "ref": 'RefCodeValue'
+	    },
+	    "country_territory": String,
+	    "additional_role": String
+		"research_specialty": [String],
+        "research_interests": String,
+        "website": String,
+        "email": String,
+        "ORCID": String
+    }],
+    "research_specialties_theoretical": [{
+    	"_id":ObjectId,
+    	"specialty_name_id": {
+		    "type": ObjectId,
+		    "ref": 'RefCodeValue'
+	    },
+	    "specialty_name": String,
+	    "specialty_name_preferred": String,
+        "information": String
+    }],
+    "research_specialties_experimental": [{
+    	"_id": ObjectId,
+    	"specialty_name_id": {
+		    "type": ObjectId,
+		    "ref": 'RefCodeValue'
+	    },
+	    "specialty_name": String,
+	    "specialty_name_preferred": String,
+        "information": String
+    }],
+    "logo": String,
+    "institution_additional_info": String,
+    "social_networking"{
+    	"facebook": String,
+    	"tweeter": String,
+    	"other": String
+    },
+    "department_web_sites"{
+    	"flickr_url": String,
+    	"youtube_url": String
+    },
+    "flags": {
+    	"update_flag": Boolean,
+    	"access_flag": Boolean,
+    	"active": Boolean,
+    },
+    "statusId": Boolean,
+    "data_source": String,
+    "update_steps": {
+    	"step": String,
+    	"complete_percentage": Number
+    }
+    "created": {
+        "by": {
+            "type": ObjectId,
+            "ref": ‘txnUser’
+        },
+        "at": Date
+    },
+    "updated": {
+        "by": {
+            "type": ObjectId,
+            "ref": ‘txnUser’
+        },
+        "at": Date
+    }
+
+}
+
+
+User Collection
+
+{
+	"_id": ObjectId,
+	"first_name": String,
+	"middle_name": String,
+	"last-name": String,
+	"university_id": ObjectId,
+	"email": String,
+	"phone": String,
+	"dob": String,
+	"password": String,
+	"flags": {
+		"access": Boolean,
+		"active": Boolean
+	},
+	"created": {
+        "by": {
+            "type": ObjectId,
+            "ref": ‘txnUser’
+        },
+        "at": Date
+    },
+    "updated": {
+        "by": {
+            "type": ObjectId,
+            "ref": ‘txnUser’
+        },
+        "at": Date
+    }
+}
+
+
+Package Collection
+
+{
+	"_id": ObjectId,
+	"package_type_id": {
+	    "type": ObjectId,
+	    "ref": 'RefCodeValue'
+	},
+	"package_type": String,
+	"package_subType_id": {
+	    "type": ObjectId,
+	    "ref": 'RefCodeValue'
+	},
+	"package_subType": String,
+	"promo_code": String,
+	"package_details": String,
+	"package_discount_percent": String,
+	"package_amount": String
+	"package_accessible": [{
+	    "type": ObjectId,
+	    "ref": 'university'
+	}],
+	"package_used": [{
+	    "type": ObjectId,
+	    "ref": 'university'
+	}],
+	"start_date": Date,
+	"end_date": Date,
+	"flags": {
+		"active" : Boolean
+	},
+	"created": {
+        "by": {
+            "type": ObjectId,
+            "ref": ‘txnUser’
+        },
+        "at": Date
+    },
+    "updated": {
+        "by": {
+            "type": ObjectId,
+            "ref": ‘txnUser’
+        },
+        "at": Date
+    }
+}
+
+
+User Login information
+
+{
+	"_id": ObjectId,
+	"user_id": {
+        "type": ObjectId,
+        "ref": ‘txnUser’
+    },
+    "ip_address": String,
+    "login_date": Date,
+    "login_time": String,
+    "logout_time": String,
+    "action_details": [{
+    	"_id": ObjectId,
+    	"university_id": ObjectId,
+    	"action_steps": String
+    }]
+}
+
+
+Student Collection
+
+{
+	"_id": ObjectId,
+	"first_name": String,
+	"last_name": String,
+	"email": String,
+	"password": String,
+	"flags" : {
+		"access": Boolean,
+		"active": Boolean
+	}
+	"created": {
+        "at": Date
+    },
+    "updated": {
+        "at": Date
+    }
+}
+
+
+Student action Collection
+
+{
+	"_id": ObjectId,
+	"student_id": {
+        "type": ObjectId,
+        "ref": 'txnStudent'
+    },
+    "ip_address": String,
+    "login_date": Date,
+    "login_time": String,
+    "logout_time": String,
+    "search_details": [{
+    	"_id": ObjectId,
+    	"search_keywords": String,
+    	"university_id": ObjectId
+    }]
+}
