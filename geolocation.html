@@ -1,35 +1,13 @@
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-<script src="http://maps.googleapis.com/maps/api/js?sensor=false&libraries=places"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/geocomplete/1.7.0/jquery.geocomplete.min.js"></script>
-
+<head>
+<script src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false&libraries=places"></script>
 <script>
-$(function () {	
-	$("#location").geocomplete({
-	  details: ".geo-details",
-	  detailsAttribute: "data-geo"
-	});
-});
+function initialize() {
+var input = document.getElementById('searchTextField');
+var autocomplete = new google.maps.places.Autocomplete(input);
+}
+google.maps.event.addDomListener(window, 'load', initialize);
 </script>
-
-<script>
-$(function () {	
-	$("#location")
-		.geocomplete()
-		.bind("geocode:result", function (event, result) {		
-		console.log(result);
-			$("#latitude").val(result.geometry.location.lat());
-			$("#longitude").val(result.geometry.location.lng());
-			//console.log(result);
-	});
-});
-</script>
-<input type="text"  id="location" >
-<div class="geo-details" style="display:none">
-  <input type="hidden" data-geo="country" value="" id="setting_country" name="setting_country">
-  <input type="hidden" data-geo="country_short" value="" id="setting_country_short" name="setting_country_short">
-  <input type="hidden" data-geo="administrative_area_level_1" value="" id="setting_state" name="setting_state">
-  <input type="hidden" data-geo="administrative_area_level_1_short" value="" id="setting_state_short" name="setting_state_short">
-  <input type="hidden" data-geo="administrative_area_level_2" value="" id="setting_city" name="setting_city">
-  <input type="hidden" data-geo="lat" value="" id="setting_latitude" name="setting_latitude">
-  <input type="hidden" data-geo="lng" value="" id="setting_longitude" name="setting_longitude">
-</div>
+</head>
+<body>
+<input id="searchTextField" type="text" size="50">
+</body>
