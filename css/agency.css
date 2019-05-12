@@ -697,6 +697,13 @@ ul.social-buttons li a:active, ul.social-buttons li a:focus, ul.social-buttons l
 .dbUpanim:hover{
   padding:4px !important;
 }
-/* .db-upanim:hover {
-  background-color: red;
-} */
+textarea[id='message'],input[type='text'],input[type='email'],input[type='tel']{
+  background-color: #000000;
+  color:#FFF;
+  opacity:0.6;
+}
+textarea[id='message']:focus,input[type='text']:focus,input[type='email']:focus,input[type='tel']:focus {
+  background-color: #000000;
+  color:#FFF;
+  opacity:0.6;
+}
