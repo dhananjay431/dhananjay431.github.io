@@ -407,7 +407,7 @@ header.masthead .intro-text .intro-heading {
 .timeline > li {
   position: relative;
   min-height: 50px;
-  margin-bottom: 50px;
+  /* margin-bottom: 50px; */
 }
 
 .timeline > li:after, .timeline > li:before {
@@ -505,7 +505,7 @@ header.masthead .intro-text .intro-heading {
   }
   .timeline > li {
     min-height: 100px;
-    margin-bottom: 100px;
+    /* margin-bottom: 100px; */
   }
   .timeline > li .timeline-panel {
     float: left;
@@ -596,7 +596,7 @@ header.masthead .intro-text .intro-heading {
 
 section#contact {
   background-color: #212529;
-  background-image: url("../img/map-image.png");
+  /* background-image: url("../img/map-image.png"); */
   background-repeat: no-repeat;
   background-position: center;
 }
