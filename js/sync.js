@@ -1,1 +1,0 @@
-"use strict";!function(n){n.db=function(){},n.db.sync=function(n,i,t){if(n.length<1)i(t);else{var c=n.shift();new Promise(function(n,i){c(t,n,i)}).then(function(t){db.sync(n,i,t)},function(n){i(t)})}}}(window);
