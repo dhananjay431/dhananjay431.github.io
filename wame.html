@@ -24,7 +24,9 @@
     <script>
         function sendWa() {
             var number = document.getElementById("number").value;
-            document.location.href = "http://wa.me/" + number;
+            //document.location.href = "http://wa.me/" + number;
+            document.location.href = "https://api.whatsapp.com/send/?phone=" + number;
+            
         }
     </script>
 </body>
