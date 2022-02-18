@@ -15,7 +15,7 @@
 
 > Technical Skills
 ```mermaid
-graph TD
+graph LR
 technology --> frontEnd & BackEnd & DB
 frontEnd --> HTML & CSS & javascript  & angular.io & angular.org 
 HTML --> HTML5
