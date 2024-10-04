@@ -1,739 +1,135 @@
-<!DOCTYPE html>
-<html lang="en">
+<!doctype html>
+<html lang="en" data-bs-theme="dark">
   <head>
+    <title>Home</title>
     <meta charset="utf-8" />
-    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link href="./assets/css/bootstrap.css" rel="stylesheet" />
 
-    <title>Belhekar Classes</title>
-    <meta name="title" content="Belhekar Coaching Classes" />
-    <meta name="description" content="sangamner top offline coaching classes" />
-    <meta name="keywords" content="coaching,classes,tuition" />
-    <meta name="robots" content="index, follow" />
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <meta name="language" content="English" />
-    <meta name="revisit-after" content="30 days" />
-    <meta name="author" content="Belhekar" />
-    <meta property="og:title" content="Belhekar Coaching Classes" />
-    <meta property="og:site_name" content="Belhekar Coaching Classes" />
-    <meta property="og:url" content=https://belhekarclasses.online>
-    <meta property="og:description" content="Belhekar Coaching Classes" />
-    <meta property="og:type" content="website" />
+    <script src="./assets/js/jquery-3.7.1.js"></script>
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script> -->
+    <script src="./assets/js/ramda.min.js"></script>
+    <script src="./assets/js/dataTables.min.js"></script>
+    <script src="./assets/js/dataTables.bootstrap5.js"></script>
+    <script src="./assets/js/cdn.min.js" defer></script>
+
     <meta
-      property="og:image"
-      content="http://belhekarclasses.online/assets/img/belhekar_classes.jpg"
+      http-equiv="Content-Security-Policy"
+      content="default-src 'self' 'unsafe-inline' 'unsafe-eval'; script-src 'self' 'unsafe-inline' 'unsafe-eval' https://fonts.googleapis.com/; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com/; font-src 'self' https://fonts.googleapis.com https://fonts.gstatic.com"
     />
-
-    <!-- Favicons -->
-    <link href="assets/img/favicon.png" rel="icon" />
-    <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon" />
-
-    <!-- Google Fonts -->
-    <link
-      href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Jost:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i"
-      rel="stylesheet"
-    />
-
-    <!-- Vendor CSS Files -->
-    <link href="assets/vendor/aos/aos.css" rel="stylesheet" />
-    <link
-      href="assets/vendor/bootstrap/css/bootstrap.min.css"
-      rel="stylesheet"
-    />
-    <link
-      href="assets/vendor/bootstrap-icons/bootstrap-icons.css"
-      rel="stylesheet"
-    />
-    <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet" />
-    <link
-      href="assets/vendor/glightbox/css/glightbox.min.css"
-      rel="stylesheet"
-    />
-    <link href="assets/vendor/remixicon/remixicon.css" rel="stylesheet" />
-    <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet" />
-
-    <!-- Template Main CSS File -->
-    <link href="assets/css/style.css" rel="stylesheet" />
-
-    <!-- =======================================================
-  * Template Name: Arsha
-  * Updated: May 30 2023 with Bootstrap v5.3.0
-  * Template URL: https://bootstrapmade.com/arsha-free-bootstrap-html-template-corporate/
-  * Author: BootstrapMade.com
-  * License: https://bootstrapmade.com/license/
-  ======================================================== -->
+    <link rel="stylesheet" href="./assets/css/bootstrap-icons.min.css" />
+    <link rel="stylesheet" href="./styles.css" />
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Fira+Code:wght@300..700&display=swap");
+    </style>
+    <style>
+      body {
+        font-family: "Fira Code", monospace;
+        font-optical-sizing: auto;
+        font-weight: 300;
+        font-style: normal;
+      }
+      th {
+        display: table-cell;
+        vertical-align: inherit;
+        font-weight: normal !important;
+        color: red;
+      }
+    </style>
   </head>
 
   <body>
-    <!-- ======= Header ======= -->
-    <header id="header" class="fixed-top">
-      <div class="container d-flex align-items-center">
-        <h1 class="logo me-auto"><a href="index.html">Belhekar Classes</a></h1>
-        <!-- Uncomment below if you prefer to use an image logo -->
-        <!-- <a href="index.html" class="logo me-auto"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
-
-        <nav id="navbar" class="navbar">
-          <ul>
-            <li><a class="nav-link scrollto active" href="#hero">Home</a></li>
-            <li><a class="nav-link scrollto" href="#about">About</a></li>
-
-            <li><a class="nav-link scrollto" href="#contact">Contact</a></li>
-            <li>
-              <a class="getstarted scrollto" href="#contact">Get Started</a>
-            </li>
-          </ul>
-          <i class="bi bi-list mobile-nav-toggle"></i>
-        </nav>
-        <!-- .navbar -->
-      </div>
-    </header>
-    <!-- End Header -->
-
-    <!-- ======= Hero Section ======= -->
-    <section id="hero" class="d-flex align-items-center">
-      <div class="container">
-        <div class="row">
-          <div
-            class="col-lg-6 d-flex flex-column justify-content-center pt-4 pt-lg-0 order-2 order-lg-1"
-            data-aos="fade-up"
-            data-aos-delay="200"
-          >
-            <h1>Belhekar Classes</h1>
-            <h2>
-              Belhekar Coaching Classes entirely offline Classes provides a
-              great learning experience for the students at the centre by the
-              top qualified faculty to help students prepare for exams
-            </h2>
-            <div class="d-flex justify-content-center justify-content-lg-start">
-              <a href="#contact" class="btn-get-started scrollto"
-                >Get Started</a
-              >
-              <a
-                href="https://www.youtube.com/watch?v=jDDaplaOz7Q"
-                class="glightbox btn-watch-video"
-                ><i class="bi bi-play-circle"></i><span>Watch Video</span></a
-              >
-            </div>
-          </div>
-          <div
-            class="col-lg-6 order-1 order-lg-2 hero-img"
-            data-aos="zoom-in"
-            data-aos-delay="200"
-          >
-            <img
-              src="assets/img/—Pngtree—student cartoon teacher teachers day_3932574.png"
-              class="img-fluid animated"
-              alt=""
-            />
-          </div>
+    <div class="container-fluid">
+      <div class="row mt-2">
+        <div
+          class="col-12 col-md-3 col-sm-3 col-lg-3"
+          x-data="{ data:{'Broad Market Indices':['NIFTY 50','NIFTY NEXT 50','NIFTY MIDCAP 50','NIFTY MIDCAP 100','NIFTY MIDCAP 150','NIFTY SMALLCAP 50','NIFTY SMALLCAP 100','NIFTY SMALLCAP 250','NIFTY MIDSMALLCAP 400','NIFTY 100','NIFTY 200','NIFTY500 MULTICAP 50:25:25','NIFTY LARGEMIDCAP 250','NIFTY MIDCAP SELECT','NIFTY TOTAL MARKET','NIFTY MICROCAP 250','NIFTY 500'],'Sectoral Indices':['NIFTY AUTO','NIFTY BANK','NIFTY ENERGY','NIFTY FINANCIAL SERVICES','NIFTY FINANCIAL SERVICES 25/50','NIFTY FMCG','NIFTY IT','NIFTY MEDIA','NIFTY METAL','NIFTY PHARMA','NIFTY PSU BANK','NIFTY REALTY','NIFTY PRIVATE BANK','NIFTY HEALTHCARE INDEX','NIFTY CONSUMER DURABLES','NIFTY OIL & GAS','NIFTY MIDSMALL HEALTHCARE'],'Thematic Indices':['NIFTY COMMODITIES','NIFTY INDIA CONSUMPTION','NIFTY CPSE','NIFTY INFRASTRUCTURE','NIFTY MNC','NIFTY GROWTH SECTORS 15','NIFTY PSE','NIFTY SERVICES SECTOR','NIFTY100 LIQUID 15','NIFTY MIDCAP LIQUID 15','NIFTY INDIA DIGITAL','NIFTY100 ESG','NIFTY INDIA MANUFACTURING','NIFTY INDIA CORPORATE GROUP INDEX - TATA GROUP 25% CAP','NIFTY500 MULTICAP INDIA MANUFACTURING 50:30:20','NIFTY500 MULTICAP INFRASTRUCTURE 50:30:20'],'Strategy Indices':['NIFTY DIVIDEND OPPORTUNITIES 50','NIFTY50 VALUE 20','NIFTY100 QUALITY 30','NIFTY50 EQUAL WEIGHT','NIFTY100 EQUAL WEIGHT','NIFTY100 LOW VOLATILITY 30','NIFTY ALPHA 50','NIFTY200 QUALITY 30','NIFTY ALPHA LOW-VOLATILITY 30','NIFTY200 MOMENTUM 30','NIFTY MIDCAP150 QUALITY 50','NIFTY200 ALPHA 30','NIFTY MIDCAP150 MOMENTUM 50'],'Others':['Securities in F&O','Permitted to Trade']} }"
+        >
+          <select class="form-select" name="index" id="index">
+            <template x-for="post in data['Broad Market Indices']">
+              <option x-text="post"></option>
+            </template>
+            <template x-for="post in data['Sectoral Indices']">
+              <option x-text="post"></option>
+            </template>
+            <template x-for="post in data['Thematic Indices']">
+              <option x-text="post"></option>
+            </template>
+            <template x-for="post in data['Strategy Indices']">
+              <option x-text="post"></option>
+            </template>
+            <template x-for="post in data['Others']">
+              <option x-text="post"></option>
+            </template>
+          </select>
+        </div>
+        <div
+          class="col-12 col-md-2 col-sm-2 col-lg-2"
+          x-data="{ drop:[{title: 'Symbol', data: 'symbol'}, {title: 'Industry',data:'meta.industry'}, { title: 'LastPrice', data: 'lastPrice' }, { title: 'PreviousClose', data: 'previousClose' }, {  title: 'Change', data: 'change' }, { title: 'Change%', data: 'pChange' }, { title: 'FFMC',data: 'ffmc',}, {  title: 'YearHigh', data: 'yearHigh' }, { title: 'YearLow', data: 'yearLow' }, {title: 'TTVE',data: 'totalTradedVolume'}, {title: 'TTV',data: 'totalTradedValue'}, {title: 'WKH',data: 'nearWKH'}, {title: 'WKL',data: 'nearWKL'}, {title: '365d%', data: 'perChange365d' }, {title: '30d%', data: 'perChange30d' }] }"
+        >
+          <select id="get1" class="form-select">
+            <template x-for="post in drop">
+              <option x-bind:value="post.data" x-text="post.title"></option>
+            </template>
+          </select>
+        </div>
+        <div class="col-12 col-md-2 col-sm-2 col-lg-2">
+          <select id="get2" class="form-select">
+            <option value="gt">></option>
+            <option value="gte">>=</option>
+            <option value="lt"><</option>
+            <option value="lte"><=</option>
+            <option value="eq">=</option>
+          </select>
+        </div>
+        <div class="col-12 col-md-2 col-sm-2 col-lg-2">
+          <input id="get3" type="text" class="form-control" />
+        </div>
+        <div class="col-12 col-md-3 col-sm-3 col-lg-3">
+          <button type="button" class="btn btn-primary" id="add">
+            <i class="bi bi-plus-lg"></i>
+          </button>
+          <button type="button" class="btn btn-primary" id="search">
+            <i class="bi bi-search"></i>
+          </button>
+          <button type="button" class="btn btn-primary" id="clear">
+            <i class="bi bi-x-lg"></i>
+          </button>
+          <button type="button" class="btn btn-primary" id="download">
+            <i class="bi bi-download"></i>
+          </button>
+          <button type="button" class="btn btn-primary" id="mainup">
+            <i class="bi bi-upload"></i>
+          </button>
+          <input type="file" id="up" class="d-none" />
         </div>
       </div>
-    </section>
-    <!-- End Hero -->
-
-    <main id="main">
-      <!-- ======= Clients Section ======= -->
-      <section id="clients" class="clients section-bg">
-        <div class="container">
-          <div class="row" data-aos="zoom-in">
-            <div
-              class="col-lg-2 col-md-4 col-6 d-flex align-items-center justify-content-center"
-            >
-              <!-- <img
-                src="assets/img/clients/client-1.png"
-                class="img-fluid"
-                alt=""
-              /> -->
-              <span class="img-fluid fs-3 fw-bold g1">Math </span>
-            </div>
-
-            <div
-              class="col-lg-2 col-md-4 col-6 d-flex align-items-center justify-content-center"
-            >
-              <!-- <img
-                src="assets/img/clients/client-2.png"
-                class="img-fluid"
-                alt=""
-              /> -->
-              <span class="img-fluid fs-3 fw-bold g2"> Science </span>
-            </div>
-
-            <div
-              class="col-lg-2 col-md-4 col-6 d-flex align-items-center justify-content-center"
-            >
-              <!-- <img
-                src="assets/img/clients/client-3.png"
-                class="img-fluid"
-                alt=""
-              /> -->
-              <span class="img-fluid fs-3 fw-bold g3"> English </span>
-            </div>
-
-            <div
-              class="col-lg-2 col-md-4 col-6 d-flex align-items-center justify-content-center"
-            >
-              <span class="img-fluid fs-3 fw-bold g4"> EVS </span>
-            </div>
-
-            <div
-              class="col-lg-2 col-md-4 col-6 d-flex align-items-center justify-content-center"
-            >
-              <span class="img-fluid fs-3 fw-bold g5"> English </span>
-            </div>
-
-            <div
-              class="col-lg-2 col-md-4 col-6 d-flex align-items-center justify-content-center"
-            >
-              <span class="img-fluid fs-3 fw-bold g6"> English </span>
-            </div>
-          </div>
+      <div class="row mt-2">
+        <div class="col-12 col-sm-6 col-md-6 col-lg-6">
+          <textarea
+            class="form-control"
+            id="exampleFormControlTextarea1"
+            rows="3"
+          ></textarea>
         </div>
-      </section>
-      <!-- End Cliens Section -->
-
-      <!-- ======= About Us Section ======= -->
-      <section id="about" class="about">
-        <div class="container" data-aos="fade-up">
-          <div class="section-title">
-            <h2>About Us</h2>
-          </div>
-
-          <div class="row content">
-            <div class="col-lg-6">
-              <p>
-                Belhekar Coaching Classes at Classes provides you with the
-                following benefits to ace your preparation journey:-
-              </p>
-              <ul>
-                <li>
-                  <i class="ri-check-double-line"></i>
-                  <h5>Strengthen your foundation:</h5>
-                  We focus on building concepts from scratch with their
-                  well-designed courses for exams students can understand
-                  concepts in depth and resolve their doubts instantly.
-                </li>
-                <li>
-                  <i class="ri-check-double-line"></i>
-                  <h5>Competitive environment:</h5>
-                  The test series provided in the respective courses help
-                  students compete in a healthy environment to keep pace with
-                  the improvement.
-                </li>
-                <li>
-                  <i class="ri-check-double-line"></i>
-                  <h5>Top faculty:</h5>
-                  Students get a chance to study from the top faculṭy, our
-                  teachers help students understand, evaluate and examine the
-                  concepts in greater depth. Notes provided follow the latest
-                  pattern of the exam with detailed subject-wise analysis via
-                  test
-                </li>
-              </ul>
-            </div>
-            <div class="col-lg-6 pt-4 pt-lg-0">
-              <p>
-                Belhekar Coaching Classes entirely offline Classes provides a
-                great learning experience for the students at the centre by the
-                top qualified faculty to help students prepare for exams
-              </p>
-              <p>
-                Classes provide students with a unique environment that helps
-                them prepare with an excellent peer group where all share a
-                mutual interest in moving ahead together.
-              </p>
-              <a href="#" class="btn-learn-more">Learn More</a>
-            </div>
-          </div>
+        <div class="col-12 col-sm-6 col-md-6 col-lg-6">
+          <textarea
+            class="form-control"
+            id="exampleFormControlTextarea2"
+            rows="3"
+          ></textarea>
         </div>
-      </section>
-      <!-- End About Us Section -->
-
-      <!-- ======= Why Us Section ======= -->
-      <section id="why-us" class="why-us section-bg">
-        <div class="container-fluid" data-aos="fade-up">
-          <div class="row">
-            <div
-              class="col-lg-7 d-flex flex-column justify-content-center align-items-stretch order-2 order-lg-1"
-            >
-              <div class="content">
-                <h3>
-                  Comprehensive learning programs & classes for all students
-                  <strong>Personalised learning programs</strong>
-                </h3>
-                <p>The ultimate tuition destination</p>
-              </div>
-
-              <div class="accordion-list">
-                <ul>
-                  <li>
-                    <a
-                      data-bs-toggle="collapse"
-                      data-bs-target="#accordion-list-1"
-                      class="collapsed"
-                      ><span>01</span> A class teacher provides personal
-                      attention and makes the class interactive
-                      <!-- <i class="bx bx-chevron-down icon-show"></i
-                      ><i class="bx bx-chevron-up icon-close"></i
-                    > -->
-                    </a>
-                    <!-- <div
-                      id="accordion-list-1"
-                      class="collapse show"
-                      data-bs-parent=".accordion-list"
-                    >
-                      <p>
-                        Feugiat pretium nibh ipsum consequat. Tempus iaculis
-                        urna id volutpat lacus laoreet non curabitur gravida.
-                        Venenatis lectus magna fringilla urna porttitor rhoncus
-                        dolor purus non.
-                      </p>
-                    </div> -->
-                  </li>
-
-                  <li>
-                    <a
-                      data-bs-toggle="collapse"
-                      data-bs-target="#accordion-list-2"
-                      class="collapsed"
-                      ><span>02 </span>Conceptual Clarity
-                      <!-- <i class="bx bx-chevron-down icon-show"></i
-                      ><i class="bx bx-chevron-up icon-close"></i
-                    > -->
-                    </a>
-                    <!-- <div
-                      id="accordion-list-2"
-                      class="collapse"
-                      data-bs-parent=".accordion-list"
-                    >
-                      <p>
-                        Dolor sit amet consectetur adipiscing elit pellentesque
-                        habitant morbi. Id interdum velit laoreet id donec
-                        ultrices. Fringilla phasellus faucibus scelerisque
-                        eleifend donec pretium. Est pellentesque elit
-                        ullamcorper dignissim. Mauris ultrices eros in cursus
-                        turpis massa tincidunt dui.
-                      </p>
-                    </div> -->
-                  </li>
-
-                  <li>
-                    <a
-                      data-bs-toggle="collapse"
-                      data-bs-target="#accordion-list-3"
-                      class="collapsed"
-                      ><span>03 </span>Exam Preparation
-                      <!-- <i class="bx bx-chevron-down icon-show"></i
-                      ><i class="bx bx-chevron-up icon-close"></i
-                    > -->
-                    </a>
-                    <!-- <div
-                      id="accordion-list-3"
-                      class="collapse"
-                      data-bs-parent=".accordion-list"
-                    >
-                      <p>
-                        Eleifend mi in nulla posuere sollicitudin aliquam
-                        ultrices sagittis orci. Faucibus pulvinar elementum
-                        integer enim. Sem nulla pharetra diam sit amet nisl
-                        suscipit. Rutrum tellus pellentesque eu tincidunt.
-                        Lectus urna duis convallis convallis tellus. Urna
-                        molestie at elementum eu facilisis sed odio morbi quis
-                      </p>
-                    </div> -->
-                  </li>
-                </ul>
-              </div>
-            </div>
-
-            <div
-              class="col-lg-5 align-items-stretch order-1 order-lg-2 img"
-              style="background-image: url('assets/img/why-us.png')"
-              data-aos="zoom-in"
-              data-aos-delay="150"
-            >
-              &nbsp;
-            </div>
-          </div>
-        </div>
-      </section>
-      <!-- End Why Us Section -->
-
-      <!-- ======= Skills Section ======= -->
-      <section id="skills" class="skills">
-        <div class="container" data-aos="fade-up">
-          <div class="row">
-            <div
-              class="col-lg-6 d-flex align-items-center"
-              data-aos="fade-right"
-              data-aos-delay="100"
-            >
-              <img src="assets/img/skills.png" class="img-fluid" alt="" />
-            </div>
-            <div
-              class="col-lg-6 pt-4 pt-lg-0 content"
-              data-aos="fade-left"
-              data-aos-delay="100"
-            >
-              <h3>
-                Voluptatem dignissimos provident quasi corporis voluptates
-              </h3>
-              <p class="fst-italic">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                eiusmod tempor incididunt ut labore et dolore magna aliqua.
-              </p>
-
-              <div class="skills-content">
-                <div class="progress">
-                  <span class="skill">Math <i class="val">100%</i></span>
-                  <div class="progress-bar-wrap">
-                    <div
-                      class="progress-bar"
-                      role="progressbar"
-                      aria-valuenow="100"
-                      aria-valuemin="0"
-                      aria-valuemax="100"
-                    ></div>
-                  </div>
-                </div>
-
-                <div class="progress">
-                  <span class="skill">Science <i class="val">100%</i></span>
-                  <div class="progress-bar-wrap">
-                    <div
-                      class="progress-bar"
-                      role="progressbar"
-                      aria-valuenow="100"
-                      aria-valuemin="0"
-                      aria-valuemax="100"
-                    ></div>
-                  </div>
-                </div>
-
-                <div class="progress">
-                  <span class="skill">English <i class="val">100%</i></span>
-                  <div class="progress-bar-wrap">
-                    <div
-                      class="progress-bar"
-                      role="progressbar"
-                      aria-valuenow="100"
-                      aria-valuemin="0"
-                      aria-valuemax="100"
-                    ></div>
-                  </div>
-                </div>
-
-                <div class="progress">
-                  <span class="skill">EVS <i class="val">100%</i></span>
-                  <div class="progress-bar-wrap">
-                    <div
-                      class="progress-bar"
-                      role="progressbar"
-                      aria-valuenow="100"
-                      aria-valuemin="0"
-                      aria-valuemax="100"
-                    ></div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section id="cta" class="cta">
-        <div class="container" data-aos="zoom-in">
-          <div class="row">
-            <div class="col-lg-9 text-center text-lg-start">
-              <h3>Call To Action</h3>
-              <!-- <p>
-                Duis aute irure dolor in reprehenderit in voluptate velit esse
-                cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
-                cupidatat non proident, sunt in culpa qui officia deserunt
-                mollit anim id est laborum.
-              </p> -->
-            </div>
-            <div class="col-lg-3 cta-btn-container text-center">
-              <a class="cta-btn align-middle" href="#">Call To Action</a>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section id="contact" class="contact">
-        <div class="container" data-aos="fade-up">
-          <div class="section-title">
-            <h2>Contact</h2>
-            <!-- <p>
-              Magnam dolores commodi suscipit. Necessitatibus eius consequatur
-              ex aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam
-              quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea.
-              Quia fugiat sit in iste officiis commodi quidem hic quas.
-            </p> -->
-          </div>
-
-          <div class="row">
-            <div class="col-lg-5 d-flex align-items-stretch">
-              <div class="info">
-                <div class="address">
-                  <i class="bi bi-geo-alt"></i>
-                  <h4>Location:</h4>
-                  <p>
-                    Above vijayanagari patsanstha,<br />
-                    ghas Bazaar Sangamner<br />
-                  </p>
-                </div>
-
-                <div class="email">
-                  <i class="bi bi-envelope"></i>
-                  <h4>Email:</h4>
-                  <p>sstar431@gmail.com</p>
-                </div>
-
-                <div class="phone">
-                  <i class="bi bi-phone"></i>
-                  <h4>Call:</h4>
-                  <p>+91 9067597196</p>
-                </div>
-
-                <!-- <iframe
-                  src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d12097.433213460943!2d-74.0062269!3d40.7101282!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xb89d1fe6bc499443!2sDowntown+Conference+Center!5e0!3m2!1smk!2sbg!4v1539943755621"
-                  frameborder="0"
-                  style="border: 0; width: 100%; height: 290px"
-                  allowfullscreen
-                ></iframe> -->
-
-                <iframe
-                  src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d3759.4296409661833!2d74.20779411490871!3d19.566085686808616!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMTnCsDMzJzU3LjkiTiA3NMKwMTInMzUuOSJF!5e0!3m2!1sen!2sin!4v1688459487949!5m2!1sen!2sin"
-                  frameborder="0"
-                  style="border: 0; width: 100%; height: 290px"
-                  allowfullscreen=""
-                ></iframe>
-              </div>
-            </div>
-
-            <div class="col-lg-7 mt-5 mt-lg-0 d-flex align-items-stretch">
-              <form
-                action="forms/contact.php"
-                method="post"
-                role="form"
-                class="php-email-form"
-              >
-                <div class="row">
-                  <div class="form-group col-md-6">
-                    <label for="name">Your Name</label>
-                    <input
-                      type="text"
-                      name="name"
-                      class="form-control"
-                      id="name"
-                      required
-                    />
-                  </div>
-                  <div class="form-group col-md-6">
-                    <label for="name">Your Email</label>
-                    <input
-                      type="email"
-                      class="form-control"
-                      name="email"
-                      id="email"
-                      required
-                    />
-                  </div>
-                </div>
-                <div class="form-group">
-                  <label for="name">Subject</label>
-                  <input
-                    type="text"
-                    class="form-control"
-                    name="subject"
-                    id="subject"
-                    required
-                  />
-                </div>
-                <div class="form-group">
-                  <label for="name">Message</label>
-                  <textarea
-                    class="form-control"
-                    name="message"
-                    rows="10"
-                    required
-                  ></textarea>
-                </div>
-                <div class="my-3">
-                  <div class="loading">Loading</div>
-                  <div class="error-message"></div>
-                  <div class="sent-message">
-                    Your message has been sent. Thank you!
-                  </div>
-                </div>
-                <div class="text-center">
-                  <button type="submit">Send Message</button>
-                </div>
-              </form>
-            </div>
-          </div>
-        </div>
-      </section>
-      <!-- End Contact Section -->
-    </main>
-    <!-- End #main -->
-
-    <!-- ======= Footer ======= -->
-    <footer id="footer">
-      <!-- <div class="footer-newsletter">
-        <div class="container">
-          <div class="row justify-content-center">
-            <div class="col-lg-6">
-              <h4>Join Our Newsletter</h4>
-              <p>
-                Tamen quem nulla quae legam multos aute sint culpa legam noster
-                magna
-              </p>
-              <form action="" method="post">
-                <input type="email" name="email" /><input
-                  type="submit"
-                  value="Subscribe"
-                />
-              </form>
-            </div>
-          </div>
-        </div>
-      </div> -->
-
-      <!--  <div class="footer-top">
-        <div class="container">
-          <div class="row">
-            <div class="col-lg-3 col-md-6 footer-contact">
-              <h5>Belhekar Coaching Classes</h5>
-              <p>
-                A108 Adam Street <br />
-                New York, NY 535022<br />
-                United States <br /><br />
-                <strong>Phone:</strong> +91 9067597196<br />
-                <strong>Email:</strong> dbel431@gmail.com<br />
-              </p>
-            </div>
-
-            <div class="col-lg-3 col-md-6 footer-links">
-              <h4>Useful Links</h4>
-              <ul>
-                <li>
-                  <i class="bx bx-chevron-right"></i> <a href="#hero">Home</a>
-                </li>
-                <li>
-                  <i class="bx bx-chevron-right"></i>
-                  <a href="#about">About us</a>
-                </li>
-                <li>
-                  <i class="bx bx-chevron-right"></i>
-                  <a href="#contact">Contact</a>
-                </li>
-                <li>
-                  <i class="bx bx-chevron-right"></i>
-                  <a href="#">Terms of servicewer </a>
-                </li>
-                <li>
-                  <i class="bx bx-chevron-right"></i>
-                  <a href="#">Privacy policy</a>
-                </li>
-              </ul>
-            </div>
-
-            <div class="col-lg-3 col-md-6 footer-links">
-              <h4>Our Social Networks</h4>
-              <p>
-               
-              </p>
-              <div class="social-links mt-3">
-                <a href="#" class="twitter"><i class="bx bxl-twitter"></i></a>
-                <a href="#" class="facebook"><i class="bx bxl-facebook"></i></a>
-                <a href="#" class="instagram"
-                  ><i class="bx bxl-instagram"></i
-                ></a>
-                <a href="#" class="google-plus"><i class="bx bxl-skype"></i></a>
-                <a href="#" class="linkedin"><i class="bx bxl-linkedin"></i></a>
-              </div>
-            </div>
+        <div class="col-12 mt-1">
+          <div class="table-responsive">
+            <table
+              id="example"
+              class="table table-sm table-striped table-hover"
+            ></table>
           </div>
         </div>
       </div>
- -->
-      <div class="container footer-bottom clearfix">
-        <div class="container">
-          <div class="row">
-            <div class="col-lg-3 col-md-6 footer-contact">
-              <h5>Belhekar Coaching Classes</h5>
-              <p>
-                Above vijayanagari patsanstha,<br />
-                ghas Bazaar Sangamner<br />
-                <strong>Phone:</strong>+91 9067597196<br />
-                <strong>Email:</strong> sstar431@gmail.com<br />
-              </p>
-            </div>
+    </div>
 
-            <div class="col-lg-3 col-md-6 footer-links">
-              <h4>Useful Links</h4>
-              <ul style="list-style-type: none">
-                <li>
-                  <i class="bx bx-chevron-right"></i> <a href="#hero">Home</a>
-                </li>
-                <li>
-                  <i class="bx bx-chevron-right"></i>
-                  <a href="#about">About us</a>
-                </li>
-                <li>
-                  <i class="bx bx-chevron-right"></i>
-                  <a href="#contact">Contact</a>
-                </li>
-                <!-- <li>
-                  <i class="bx bx-chevron-right"></i>
-                  <a href="#">Terms of servicewer </a>
-                </li>
-                <li>
-                  <i class="bx bx-chevron-right"></i>
-                  <a href="#">Privacy policy</a>
-                </li> -->
-              </ul>
-            </div>
-
-            <div class="col-lg-3 col-md-6 footer-links">
-              <h4>Our Social Networks</h4>
-              <p>
-                <!-- Cras fermentum odio eu feugiat lide par naso tierra videa magna
-                derita valies -->
-              </p>
-              <div class="social-links mt-3">
-                <a href="#" class="twitter"><i class="bx bxl-twitter"></i></a>
-                <a href="#" class="facebook"><i class="bx bxl-facebook"></i></a>
-                <a href="#" class="instagram"
-                  ><i class="bx bxl-instagram"></i
-                ></a>
-                <a href="#" class="google-plus"><i class="bx bxl-skype"></i></a>
-                <a href="#" class="linkedin"><i class="bx bxl-linkedin"></i></a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </footer>
-    <!-- End Footer -->
-
-    <div id="preloader"></div>
-    <a
-      href="#"
-      class="back-to-top d-flex align-items-center justify-content-center"
-      ><i class="bi bi-arrow-up-short"></i
-    ></a>
-
-    <!-- Vendor JS Files -->
-    <script src="assets/vendor/aos/aos.js"></script>
-    <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-    <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
-    <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
-    <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
-    <script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
-    <script src="assets/vendor/php-email-form/validate.js"></script>
-
-    <!-- Template Main JS File -->
-    <script src="assets/js/main.js"></script>
+    <script src="./script.js"></script>
   </body>
 </html>
