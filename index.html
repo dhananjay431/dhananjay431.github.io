@@ -5,13 +5,19 @@
     <meta
       content="width=device-width, initial-scale=1.0"
       name="viewport" />
-    <title>Dhananjay Belhekar</title>
+    <meta
+      http-equiv="Content-Security-Policy"
+      content="default-src 'self' 'unsafe-inline' 'unsafe-hashes'; style-src 'self' data: 'unsafe-inline' https://fonts.googleapis.com/ https://fonts.gstatic.com; font-src 'self' data: https://fonts.googleapis.com/ https://fonts.gstatic.com" />
     <meta
       name="description"
-      content="" />
+      content="Dhananjay Belhekar Resume" />
     <meta
       name="keywords"
-      content="" />
+      content="Dhananjay Belhekar, HTML, CSS, JavaScript" />
+    <meta
+      name="author"
+      content="Dhananjay Belhekar" />
+    <title>Dhananjay Belhekar</title>
 
     <!-- Favicons -->
     <link
@@ -130,14 +136,16 @@
         id="hero"
         class="hero section dark-background">
         <img
-          src="assets/img/img1499237613813.jpg"
-          alt=""
-          data-aos="fade-in" />
+          class="d-none d-sm-block"
+          src="assets/img/img1499237613813.webp"
+          alt="Dhananjay Belhekar" />
+        <img
+          class="d-block d-sm-none"
+          src="assets/img/img1499237613813-mobile.webp"
+          alt="Dhananjay Belhekar" />
 
         <div
-          class="container d-flex flex-column align-items-center justify-content-center text-center"
-          data-aos="fade-up"
-          data-aos-delay="100">
+          class="container d-flex flex-column align-items-center justify-content-center text-center">
           <h2>I am Dhananjay Belhekar</h2>
           <p>
             <span
@@ -161,7 +169,7 @@
               <div class="row justify-content-between gy-4">
                 <div class="col-lg-5">
                   <img
-                    src="assets/img/profile-img1.jpg"
+                    src="assets/img/profile-img1.webp"
                     class="img-fluid"
                     alt="" />
                 </div>
@@ -185,6 +193,7 @@
                   >
                   <div class="progress-bar-wrap">
                     <div
+                      aria-label="progress-bar-wrap"
                       class="progress-bar"
                       role="progressbar"
                       aria-valuenow="100"
@@ -201,6 +210,7 @@
                   >
                   <div class="progress-bar-wrap">
                     <div
+                      aria-label="progress-bar-wrap"
                       class="progress-bar"
                       role="progressbar"
                       aria-valuenow="95"
@@ -217,6 +227,7 @@
                   <div class="progress-bar-wrap">
                     <div
                       class="progress-bar"
+                      aria-label="progress-bar-wrap"
                       role="progressbar"
                       aria-valuenow="90"
                       aria-valuemin="0"
@@ -232,6 +243,7 @@
                   <div class="progress-bar-wrap">
                     <div
                       class="progress-bar"
+                      aria-label="progress-bar-wrap"
                       role="progressbar"
                       aria-valuenow="90"
                       aria-valuemin="0"
@@ -348,10 +360,14 @@
                 <h4>Master of Computer Applications</h4>
                 <h5>2014 - 2015</h5>
                 <p>
-                  <em
-                    >Institute of Industrial and Computer Management and
-                    Research (IICMR),Savitribai Phule Pune University</em
-                  >
+                  <em>
+                    <a
+                      href="https://iicmrmca.org/"
+                      target="_blank">
+                      Institute of Industrial and Computer Management and
+                      Research (IICMR),Savitribai Phule Pune University
+                    </a>
+                  </em>
                 </p>
                 <!-- <p>
                   Qui deserunt veniam. Et sed aliquam labore tempore sed
@@ -365,8 +381,12 @@
                 <h4>Bachelor of Fine Arts &amp; Graphic Design</h4>
                 <h5>2010 - 2013</h5>
                 <p>
-                  <em
-                    >SMBST College Sangamner,Savitribai Phule Pune University
+                  <em>
+                    <a
+                      href="https://www.smbstcollege.com/"
+                      target="_blank">
+                      SMBST College Sangamner,Savitribai Phule Pune University
+                    </a>
                   </em>
                 </p>
                 <!-- <p>
@@ -385,7 +405,13 @@
               data-aos-delay="200">
               <h3 class="resume-title">Professional Experience</h3>
               <div class="resume-item">
-                <h4>Adnate IT Solutions,Jaipur, INDIA - 302021</h4>
+                <h4>
+                  <a
+                    href="https://adnatesolutions.com/"
+                    target="_blank"
+                    >Adnate IT Solutions, Jaipur, INDIA - 302021
+                  </a>
+                </h4>
                 <p>
                   Technology :- Angular.io, Angular.js, React.js, Node.js,
                   Express.js,jenkins
@@ -424,7 +450,13 @@
               <!-- Edn Resume Item -->
 
               <div class="resume-item">
-                <h4>Extrapreneurs India Pvt Ltd</h4>
+                <h4>
+                  <a
+                    href="https://extrapreneursindia.com/"
+                    target="_blank">
+                    Extrapreneurs India Pvt Ltd,Pune INDIA - 411057
+                  </a>
+                </h4>
                 <h5>2017 - 2018</h5>
                 <p>Technology :- Node.js, Express.js, Angular.js, MongoDB</p>
                 <p><em>Full Stack Developer </em></p>
@@ -460,7 +492,13 @@
               <!-- Edn Resume Item -->
 
               <div class="resume-item">
-                <h4>tekreliance</h4>
+                <h4>
+                  <a
+                    href="https://tekreliance.com/"
+                    target="_blank">
+                    Tekreliance LLC, USA
+                  </a>
+                </h4>
                 <h5>2016 - 2017</h5>
                 <p>Technology :- CakePHP, Angular.js, Ionic, Mysql</p>
                 <p><em>Frontend Developer </em></p>
@@ -696,7 +734,7 @@
         id="stats"
         class="stats section accent-background">
         <img
-          src="assets/img/stats-bg.jpg"
+          src="assets/img/stats-bg.webp"
           alt=""
           data-aos="fade-in" />
 
@@ -812,7 +850,7 @@
                   alt="" />
                 <div class="portfolio-info">
                   <h4>App 1</h4>
-                  <p>Lorem ipsum, dolor sit amet consectetur</p>
+                  <!-- <p>Lorem ipsum, dolor sit amet consectetur</p> -->
                   <a
                     href="assets/img/portfolio/app-1.jpg"
                     title="App 1"
@@ -838,7 +876,7 @@
                   alt="" />
                 <div class="portfolio-info">
                   <h4>Product 1</h4>
-                  <p>Lorem ipsum, dolor sit amet consectetur</p>
+                  <!-- <p>Lorem ipsum, dolor sit amet consectetur</p> -->
                   <a
                     href="assets/img/portfolio/product-1.jpg"
                     title="Product 1"
@@ -864,7 +902,7 @@
                   alt="" />
                 <div class="portfolio-info">
                   <h4>Branding 1</h4>
-                  <p>Lorem ipsum, dolor sit amet consectetur</p>
+                  <!-- <p>Lorem ipsum, dolor sit amet consectetur</p> -->
                   <a
                     href="assets/img/portfolio/branding-1.jpg"
                     title="Branding 1"
@@ -890,7 +928,7 @@
                   alt="" />
                 <div class="portfolio-info">
                   <h4>Books 1</h4>
-                  <p>Lorem ipsum, dolor sit amet consectetur</p>
+                  <!-- <p>Lorem ipsum, dolor sit amet consectetur</p> -->
                   <a
                     href="assets/img/portfolio/books-1.jpg"
                     title="Branding 1"
@@ -916,7 +954,7 @@
                   alt="" />
                 <div class="portfolio-info">
                   <h4>App 2</h4>
-                  <p>Lorem ipsum, dolor sit amet consectetur</p>
+                  <!-- <p>Lorem ipsum, dolor sit amet consectetur</p> -->
                   <a
                     href="assets/img/portfolio/app-2.jpg"
                     title="App 2"
@@ -942,7 +980,7 @@
                   alt="" />
                 <div class="portfolio-info">
                   <h4>Product 2</h4>
-                  <p>Lorem ipsum, dolor sit amet consectetur</p>
+                  <!-- <p>Lorem ipsum, dolor sit amet consectetur</p> -->
                   <a
                     href="assets/img/portfolio/product-2.jpg"
                     title="Product 2"
@@ -968,7 +1006,7 @@
                   alt="" />
                 <div class="portfolio-info">
                   <h4>Branding 2</h4>
-                  <p>Lorem ipsum, dolor sit amet consectetur</p>
+                  <!-- <p>Lorem ipsum, dolor sit amet consectetur</p> -->
                   <a
                     href="assets/img/portfolio/branding-2.jpg"
                     title="Branding 2"
@@ -994,7 +1032,7 @@
                   alt="" />
                 <div class="portfolio-info">
                   <h4>Books 2</h4>
-                  <p>Lorem ipsum, dolor sit amet consectetur</p>
+                  <!-- <p>Lorem ipsum, dolor sit amet consectetur</p> -->
                   <a
                     href="assets/img/portfolio/books-2.jpg"
                     title="Branding 2"
@@ -1020,7 +1058,7 @@
                   alt="" />
                 <div class="portfolio-info">
                   <h4>App 3</h4>
-                  <p>Lorem ipsum, dolor sit amet consectetur</p>
+                  <!-- <p>Lorem ipsum, dolor sit amet consectetur</p> -->
                   <a
                     href="assets/img/portfolio/app-3.jpg"
                     title="App 3"
@@ -1046,7 +1084,7 @@
                   alt="" />
                 <div class="portfolio-info">
                   <h4>Product 3</h4>
-                  <p>Lorem ipsum, dolor sit amet consectetur</p>
+                  <!-- <p>Lorem ipsum, dolor sit amet consectetur</p> -->
                   <a
                     href="assets/img/portfolio/product-3.jpg"
                     title="Product 3"
@@ -1072,7 +1110,7 @@
                   alt="" />
                 <div class="portfolio-info">
                   <h4>Branding 3</h4>
-                  <p>Lorem ipsum, dolor sit amet consectetur</p>
+                  <!-- <p>Lorem ipsum, dolor sit amet consectetur</p> -->
                   <a
                     href="assets/img/portfolio/branding-3.jpg"
                     title="Branding 2"
@@ -1098,7 +1136,7 @@
                   alt="" />
                 <div class="portfolio-info">
                   <h4>Books 3</h4>
-                  <p>Lorem ipsum, dolor sit amet consectetur</p>
+                  <!-- <p>Lorem ipsum, dolor sit amet consectetur</p> -->
                   <a
                     href="assets/img/portfolio/books-3.jpg"
                     title="Branding 3"
@@ -1223,7 +1261,7 @@ Maintenance: Approximately 15–25% of the project's initial cost per year.
         id="testimonials"
         class="testimonials section accent-background">
         <img
-          src="assets/img/testimonials-bg.jpg"
+          src="assets/img/testimonials-bg.webp"
           class="testimonials-bg"
           alt="" />
 
@@ -1577,7 +1615,7 @@ Maintenance: Approximately 15–25% of the project's initial cost per year.
           <!-- You can delete the links only if you've purchased the pro version. -->
           <!-- Licensing information: https://bootstrapmade.com/license/ -->
           <!-- Purchase the pro version with working PHP/AJAX contact form: [buy-url] -->
-          Designed by <a href="#">Dhananjay</a>
+          <b> Designed by Dhananjay </b>
         </div>
       </div>
     </footer>
