@@ -3,7 +3,8 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "start": "servor --reload"
+    "start": "servor --reload",
+    "gp":"gulp"
   },
   "author": "",
   "license": "ISC",
