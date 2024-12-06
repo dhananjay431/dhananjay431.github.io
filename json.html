@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Home</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <!--
+      Need a visual blank slate?
+      Remove all code in `styles.css`!
+    -->
+    <style>
+      * {
+        box-sizing: border-box;
+        font-family: "Open Sans", Consolas, Georgia, Times, "Times New Roman",
+          serif;
+      }
+
+      body {
+        font-size: 1rem;
+      }
+
+      ul {
+        list-style: none;
+        border-left: 1px dotted #ddd;
+      }
+
+      .open:before {
+        content: attr(data-before);
+        display: inline-block;
+      }
+
+      .close:after,
+      .close:before,
+      .open:before {
+        font-family: arial;
+        font-size: 22px;
+        margin-right: 7px;
+        cursor: pointer;
+        color: #888;
+      }
+
+      .fold.open,
+      .fold.close {
+        margin-right: 7px;
+      }
+
+      .fold.close:after {
+        content: attr(data-after);
+        font-size: 30px;
+        margin-left: 7px;
+      }
+
+      .len {
+        color: #ddd;
+      }
+    </style>
+    <script>
+      !(function (t, e) {
+        "object" == typeof exports && "undefined" != typeof module
+          ? (module.exports = e())
+          : "function" == typeof define && define.amd
+            ? define(e)
+            : ((t =
+                "undefined" != typeof globalThis
+                  ? globalThis
+                  : t || self).jsnview = e());
+      })(this, function () {
+        "use strict";
+        function t(t) {
+          return Number(t) === t && t % 1 != 0
+            ? "float"
+            : {}.toString
+                .call(t)
+                .match(/\s([a-zA-Z]+)/)[1]
+                .toLowerCase();
+        }
+        function e(t) {
+          return document.createElement(t);
+        }
+        let n = {
+          showLen: !1,
+          showType: !1,
+          showBrackets: !0,
+          showFoldmarker: !0,
+          colors: {
+            boolean: "#ff2929",
+            null: "#ff2929",
+            string: "#690",
+            number: "#905",
+            float: "#002f99",
+          },
+        };
+        function o(s, l = null, a = !1) {
+          for (const c in s) {
+            const r = e("li"),
+              i = s[c],
+              p = Array.isArray(i);
+            if (
+              ((d = i) &&
+                "object" == typeof d &&
+                "Object" === d.constructor.name) ||
+              p
+            ) {
+              let t = !1;
+              const s = e("span");
+              if (
+                (s.classList.add("fold", "open"),
+                s.setAttribute("data-before", "▾"),
+                s.setAttribute("data-close", "▸"),
+                n.showFoldmarker && s.setAttribute("data-after", "↔"),
+                (s.textContent = n.showBrackets
+                  ? (a ? "" : `"${c}": `) + (p ? "[" : "{")
+                  : ""),
+                r.appendChild(s),
+                n.showLen)
+              ) {
+                const t = e("span"),
+                  n = p ? i.length : Object.keys(i).length;
+                t.classList.add("len"),
+                  (t.textContent = `{${n}}`),
+                  r.appendChild(t);
+              }
+              const d = e("ul");
+              if ((r.appendChild(d), p)) {
+                const t = e("ul");
+                for (let e = 0; e < i.length; e++) o(i[e], t, !0);
+              }
+              o(i, d, p),
+                (s.onclick = () => {
+                  (t = !t),
+                    (s.parentElement.querySelector("ul").style.display = t
+                      ? "none"
+                      : "block"),
+                    s.classList.add(t ? "close" : "open"),
+                    s.classList.remove(t ? "open" : "close");
+                });
+              const f = e("span");
+              f.classList.add("fold"),
+                (f.textContent = n.showBrackets ? (p ? "]" : "}") : ""),
+                r.appendChild(f),
+                l.appendChild(r);
+            } else {
+              const o = e("span"),
+                s = e("span"),
+                d = t(i);
+              (o.style.color = n.colors[d]),
+                (o.textContent = isNaN(i) ? `"${i}"` : i),
+                (r.textContent += a ? "" : `"${c}": `),
+                r.appendChild(o),
+                n.showType &&
+                  (s.classList.add("type"),
+                  (s.textContent = `(${d})`),
+                  r.appendChild(s)),
+                l.appendChild(r);
+            }
+          }
+          var d;
+          return l;
+        }
+        return function (t, s) {
+          n = { ...n, ...s };
+          const l = e("ul");
+          return l.classList.add("jsv"), o({ data: t }, l, !0), l;
+        };
+      });
+    </script>
+  </head>
+  <body>
+    <div id="root"></div>
+
+    <script>
+      const options = {
+        showLen: true,
+        showType: false,
+        showBrackets: true,
+        showFoldmarker: true,
+      };
+      document.getElementById("root").addEventListener("paste", function (ev) {
+        new Promise((r1, r2) => {
+          var dt = { msg: "invalid json" };
+          try {
+            dt = (ev.clipboardData || window.clipboardData).getData("Text");
+            r1(JSON.parse(dt));
+          } catch (err) {
+            r2({ msg: "invalid json" });
+          }
+        }).then(
+          (resp) => {
+            let root = document.getElementById("root");
+            root.innerHTML = "";
+            root.append(window.jsnview(resp, options));
+          },
+          (err) => {
+            let root = document.getElementById("root");
+            root.innerHTML = "";
+            root.append(window.jsnview(err, options));
+          },
+        );
+      });
+
+      root.appendChild(
+        window.jsnview(
+          {
+            id: 1,
+            name: "Dhananjay Belhekar",
+            username: "Dhananjay",
+            email: "dhananjay123@gmail.com",
+            address: {
+              street: "Kulas Light",
+              suite: "Apt. 556",
+              city: "Gwenborough",
+              zipcode: "92998-3874",
+              geo: {
+                lat: "-37.3159",
+                lng: "81.1496",
+              },
+            },
+            phone: "1-770-736-8031 x56442",
+            website: "dhananjaypro.in",
+            company: {
+              name: "Romaguera-Crona",
+              catchPhrase: "Multi-layered client-server neural-net",
+              bs: "harness real-time e-markets",
+            },
+          },
+          options,
+        ),
+      );
+    </script>
+  </body>
+</html>
